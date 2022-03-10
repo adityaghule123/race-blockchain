@@ -11,9 +11,9 @@ import (
 )
 
 var (
-	totalSupplyMethod    = contracts.NewRegisteredContractMethod(params.GoldTokenRegistryId, abis.GoldToken, "totalSupply", params.MaxGasForTotalSupply)
-	increaseSupplyMethod = contracts.NewRegisteredContractMethod(params.GoldTokenRegistryId, abis.GoldToken, "increaseSupply", params.MaxGasForIncreaseSupply)
-	mintMethod           = contracts.NewRegisteredContractMethod(params.GoldTokenRegistryId, abis.GoldToken, "mint", params.MaxGasForMintGas)
+	totalSupplyMethod    = contracts.NewRegisteredContractMethod(params.RaceTokenRegistryId, abis.RaceToken, "totalSupply", params.MaxGasForTotalSupply)
+	increaseSupplyMethod = contracts.NewRegisteredContractMethod(params.RaceTokenRegistryId, abis.RaceToken, "increaseSupply", params.MaxGasForIncreaseSupply)
+	mintMethod           = contracts.NewRegisteredContractMethod(params.RaceTokenRegistryId, abis.RaceToken, "mint", params.MaxGasForMintGas)
 )
 
 func GetTotalSupply(vmRunner vm.EVMRunner) (*big.Int, error) {

@@ -10391,8 +10391,8 @@ func init() {
       "stateMutability": "view",
       "type": "function"
     }
-  ]`)// GoldToken ABI
-	abis["GoldToken"] = mustParseABI(`[
+  ]`)// RaceToken ABI
+	abis["RaceToken"] = mustParseABI(`[
     {
       "anonymous": false,
       "inputs": [

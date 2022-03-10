@@ -131,7 +131,7 @@ func BaseConfig() *Config {
 			AttestationRequestFeeInDollars: decimal("0.05"), // use decimal rather than fixed, since we use this to multiply by
 		},
 		TransferWhitelist: TransferWhitelistParameters{},
-		GoldToken: GoldTokenParameters{
+		RaceToken: RaceTokenParameters{
 			Frozen: false,
 		},
 		Blockchain: BlockchainParameters{

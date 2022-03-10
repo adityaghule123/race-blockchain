@@ -501,7 +501,7 @@ func (sb *Backend) Finalize(chain consensus.ChainHeaderReader, header *types.Hea
 
 	snapshot := state.Snapshot()
 	vmRunner := sb.chain.NewEVMRunner(header, state)
-	err := sb.setInitialGoldTokenTotalSupplyIfUnset(vmRunner)
+	err := sb.setInitialRaceTokenTotalSupplyIfUnset(vmRunner)
 	if err != nil {
 		state.RevertToSnapshot(snapshot)
 	}

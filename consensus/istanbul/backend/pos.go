@@ -241,7 +241,7 @@ func (sb *Backend) distributeVoterRewards(vmRunner vm.EVMRunner, valSet []istanb
 	return gold_token.Mint(vmRunner, lockedGoldAddress, electionRewards)
 }
 
-func (sb *Backend) setInitialGoldTokenTotalSupplyIfUnset(vmRunner vm.EVMRunner) error {
+func (sb *Backend) setInitialRaceTokenTotalSupplyIfUnset(vmRunner vm.EVMRunner) error {
 	totalSupply, err := gold_token.GetTotalSupply(vmRunner)
 	if err != nil {
 		return err

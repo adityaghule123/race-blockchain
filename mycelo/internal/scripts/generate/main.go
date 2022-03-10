@@ -41,7 +41,7 @@ var contractNames = []string{
 	"Freezer",
 	"TransferWhitelist",
 	"FeeCurrencyWhitelist",
-	"GoldToken",
+	"RaceToken",
 	"SortedOracles",
 	"GasPriceMinimum",
 	"ReserveSpenderMultiSig",

@@ -453,7 +453,7 @@ const GasPriceMinimumStr = `[
 ]`
 
 // nolint: gosec
-const GoldTokenStr = `[
+const RaceTokenStr = `[
 	{
 		"constant": false,
 		"inputs": [

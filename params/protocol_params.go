@@ -210,7 +210,7 @@ var (
 	FeeCurrencyWhitelistRegistryId = makeRegistryId("FeeCurrencyWhitelist")
 	FreezerRegistryId              = makeRegistryId("Freezer")
 	GasPriceMinimumRegistryId      = makeRegistryId("GasPriceMinimum")
-	GoldTokenRegistryId            = makeRegistryId("GoldToken")
+	RaceTokenRegistryId            = makeRegistryId("RaceToken")
 	GovernanceRegistryId           = makeRegistryId("Governance")
 	LockedGoldRegistryId           = makeRegistryId("LockedGold")
 	RandomRegistryId               = makeRegistryId("Random")

@@ -688,7 +688,7 @@ func (c *transfer) RequiredGas(input []byte) uint64 {
 }
 
 func (c *transfer) Run(input []byte, caller common.Address, evm *EVM) ([]byte, error) {
-	celoGoldAddress, err := evm.Context.GetRegisteredAddress(evm, params.GoldTokenRegistryId)
+	celoGoldAddress, err := evm.Context.GetRegisteredAddress(evm, params.RaceTokenRegistryId)
 	if err != nil {
 		return nil, err
 	}

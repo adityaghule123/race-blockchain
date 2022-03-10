@@ -92,8 +92,8 @@ func (ctx *deployContext) deploy() (core.GenesisAlloc, error) {
 		// 03.bis FeeCurrencyWhitelist
 		ctx.deployFeeCurrencyWhitelist,
 
-		// 04 GoldToken
-		ctx.deployGoldToken,
+		// 04 RaceToken
+		ctx.deployRaceToken,
 
 		// 05 SortedOracles
 		ctx.deploySortedOracles,
@@ -471,23 +471,23 @@ func (ctx *deployContext) deployFeeCurrencyWhitelist() error {
 	})
 }
 
-func (ctx *deployContext) deployGoldToken() error {
-	err := ctx.deployCoreContract("GoldToken", func(contract *contract.EVMBackend) error {
+func (ctx *deployContext) deployRaceToken() error {
+	err := ctx.deployCoreContract("RaceToken", func(contract *contract.EVMBackend) error {
 		return contract.SimpleCall("initialize", env.MustProxyAddressFor("Registry"))
 	})
 	if err != nil {
 		return err
 	}
 
-	if ctx.genesisConfig.GoldToken.Frozen {
-		ctx.logger.Info("Freezing GoldToken")
-		err = ctx.contract("Freezer").SimpleCall("freeze", env.MustProxyAddressFor("GoldToken"))
+	if ctx.genesisConfig.RaceToken.Frozen {
+		ctx.logger.Info("Freezing RaceToken")
+		err = ctx.contract("Freezer").SimpleCall("freeze", env.MustProxyAddressFor("RaceToken"))
 		if err != nil {
 			return err
 		}
 	}
 
-	for _, bal := range ctx.genesisConfig.GoldToken.InitialBalances {
+	for _, bal := range ctx.genesisConfig.RaceToken.InitialBalances {
 		ctx.statedb.SetBalance(bal.Account, bal.Amount)
 	}
 

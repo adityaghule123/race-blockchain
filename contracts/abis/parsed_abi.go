@@ -19,7 +19,7 @@ var (
 	EpochRewards         *abi.ABI = mustParseAbi("EpochRewards", EpochRewardsStr)
 	Freezer              *abi.ABI = mustParseAbi("Freezer", FreezerStr)
 	GasPriceMinimum      *abi.ABI = mustParseAbi("GasPriceMinimum", GasPriceMinimumStr)
-	GoldToken            *abi.ABI = mustParseAbi("GoldToken", GoldTokenStr)
+	RaceToken            *abi.ABI = mustParseAbi("RaceToken", RaceTokenStr)
 	Random               *abi.ABI = mustParseAbi("Random", RandomStr)
 	Validators           *abi.ABI = mustParseAbi("Validators", ValidatorsStr)
 )
@@ -40,7 +40,7 @@ var byRegistryId = map[common.Hash]*abi.ABI{
 	params.EpochRewardsRegistryId:         EpochRewards,
 	params.FreezerRegistryId:              Freezer,
 	params.GasPriceMinimumRegistryId:      GasPriceMinimum,
-	params.GoldTokenRegistryId:            GoldToken,
+	params.RaceTokenRegistryId:            RaceToken,
 	params.RandomRegistryId:               Random,
 	params.ValidatorsRegistryId:           Validators,
 }

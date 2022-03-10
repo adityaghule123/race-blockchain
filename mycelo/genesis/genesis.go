@@ -40,7 +40,7 @@ func CreateCommonGenesisConfig(chainID *big.Int, adminAccountAddress common.Addr
 	genesisConfig.GovernanceApproverMultiSig = adminMultisig
 
 	// Ensure nothing is frozen
-	genesisConfig.GoldToken.Frozen = false
+	genesisConfig.RaceToken.Frozen = false
 	genesisConfig.StableToken.Frozen = false
 	genesisConfig.Exchange.Frozen = false
 	genesisConfig.Reserve.FrozenAssetsDays = 0
@@ -60,7 +60,7 @@ func FundAccounts(genesisConfig *Config, accounts []env.Account) {
 	}
 	genesisConfig.StableTokenEUR.InitialBalances = ceurBalances
 	genesisConfig.StableToken.InitialBalances = cusdBalances
-	genesisConfig.GoldToken.InitialBalances = goldBalances
+	genesisConfig.RaceToken.InitialBalances = goldBalances
 }
 
 // GenerateGenesis will create a new genesis block with full celo blockchain already configured

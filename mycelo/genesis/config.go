@@ -36,7 +36,7 @@ type Config struct {
 	Exchange                   ExchangeParameters
 	ExchangeEUR                ExchangeParameters
 	LockedGold                 LockedGoldParameters
-	GoldToken                  GoldTokenParameters
+	RaceToken                  RaceTokenParameters
 	Validators                 ValidatorsParameters
 	Election                   ElectionParameters
 	EpochRewards               EpochRewardsParameters
@@ -239,8 +239,8 @@ type TransferWhitelistParameters struct {
 	RegistryIDs []common.Hash    `json:"registryIds"`
 }
 
-// GoldTokenParameters are the initial configuration parameters for GoldToken
-type GoldTokenParameters struct {
+// RaceTokenParameters are the initial configuration parameters for RaceToken
+type RaceTokenParameters struct {
 	Frozen          bool        `json:"frozen"`
 	InitialBalances BalanceList `json:"initialBalances"`
 }
