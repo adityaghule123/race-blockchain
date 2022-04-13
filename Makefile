@@ -22,12 +22,12 @@ else
 	OS = linux
 endif
 
-MONOREPO_COMMIT=celo-core-contracts-v3.rc0
+MONOREPO_COMMIT=race-contracts-v3
 
 # We checkout the monorepo as a sibling to the celo-blockchain dir because the
 # huge amount of files in the monorepo interferes with tooling such as gopls,
 # which becomes very slow.
-MONOREPO_PATH=../.celo-blockchain-monorepo-checkout
+MONOREPO_PATH=../.race-monorepo-checkout
 
 # This either evaluates to the contract source files if they exist or NOT_FOUND
 # if celo-monorepo has not been checked out yet.
@@ -80,7 +80,7 @@ $(MONOREPO_PATH):
 	if  [ ! -e $(MONOREPO_PATH) ]; \
 	then \
 		echo "Cloning monorepo at $(MONOREPO_COMMIT)"; \
-		git clone --quiet --depth 1 --branch $(MONOREPO_COMMIT) https://github.com/celo-org/celo-monorepo.git $(MONOREPO_PATH); \
+		git clone --quiet --depth 1 --branch $(MONOREPO_COMMIT) https://github.com/AyGupta18/race-monorepo.git $(MONOREPO_PATH); \
 		echo $(MONOREPO_COMMIT) > $(MONOREPO_PATH)/current_commit; \
 	elif [ $(MONOREPO_COMMIT) != $(shell cat $(MONOREPO_PATH)/current_commit 2>/dev/null || echo "") ]; \
 	then \
