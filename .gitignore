@@ -67,3 +67,7 @@ docs/.jekyll-metadata
 
 # Ignore compiled contracts
 compiled-system-contracts
+
+# Genesis env and config
+**/env.json
+**/genesis-config.json 
