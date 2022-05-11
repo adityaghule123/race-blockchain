@@ -80,7 +80,7 @@ $(MONOREPO_PATH):
 	if  [ ! -e $(MONOREPO_PATH) ]; \
 	then \
 		echo "Cloning monorepo at $(MONOREPO_COMMIT)"; \
-		git clone --quiet --depth 1 --branch $(MONOREPO_COMMIT) https://github.com/AyGupta18/race-monorepo.git $(MONOREPO_PATH); \
+		git clone --quiet --depth 1 --branch $(MONOREPO_COMMIT) https://github.com/race-internal/race_monorepo.git $(MONOREPO_PATH); \
 		echo $(MONOREPO_COMMIT) > $(MONOREPO_PATH)/current_commit; \
 	elif [ $(MONOREPO_COMMIT) != $(shell cat $(MONOREPO_PATH)/current_commit 2>/dev/null || echo "") ]; \
 	then \
